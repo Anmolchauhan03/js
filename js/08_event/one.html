@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+</head>
+<body style="background-color: #414141 ; color:antiquewhite" ; >
+    <h2>Image Collection (Anmol Rajput)</h2>
+    <div>
+        <ul id="images">
+        <li><img width="200px" id="bird" src="/08_event/images/bird-8270719_640.webp" alt="bird"></li>
+        <li><img width="200px" id="butterfly" src="/08_event/images/butterfly-8313010_640.webp" alt="butterfly"></li>
+        <li><img width="200px" id="duck" src="/08_event/images/duck-8297668_640.webp" alt="duck"></li>
+        <li><img width="200px" id="elephant" src="/08_event/images/elephant-8253639_640.webp" alt="elephant"></li>
+        <li><img width="200px" id="mountains" src="/08_event/images/mountains-8292685_640.webp" alt="mountains"></li>
+        <li><img width="200px" id="train" src="/08_event/images/train-8302635_640.webp" alt="train"></li>
+        <li><img width="200px" id="woman" src="/08_event/images/woman-8261342_640.webp" alt="woman"></li>
+        <li><img width="200px" id="cat" src="/08_event/images/european-shorthair-8267220_640.webp" alt="cat"></li>
+        <li><img width="200px" id="tree" src="/08_event/images/tree-736885_1280.webp" alt="tree"></li>
+        <li><img width="200px" id="mushroom" src="/08_event/images/mushroom-8294526_640.webp" alt="mushroom"></li>
+        <li><a href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+// document.getElementById('cat').onclick=function(){
+  //  alert("cat clicked")
+ //}
+// remove previous - then it will run 
+ <!--// document.getElementById('cat').addEventListener('click', function(){
+   // alert("cat clicked again")
+ //}) -->
+ //document.getElementById('cat').addEventListener('click', function(e){
+   // console.log(e)
+ //}, false)                                                                  // false is default
+ //attachEvent()
+ //jQuery - .on
+ // what to be study -> type,timestamp,defaultPrevented,target,sourceElement,currentTarget,toElement
+ // for interviews -> clientX,clientY,screenX,screenY, altKey,ctrlKey,shiftKey,keyCode
+
+ document.querySelector('#images').addEventListener('click',function(e){
+    console.log(e.target)
+ },false)
+ 
+
+</script>
+</html>

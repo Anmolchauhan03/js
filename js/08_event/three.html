@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interval Example</title>
+</head>
+<body>
+    <h1>Anmol Rajput</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        // JavaScript code starts here
+
+        // Function to log current timestamp with a message
+        const sayDate = function(str) {
+            console.log(str, Date.now());
+        }
+
+        // Variable to hold the interval ID
+        let intervalId = null;
+
+        // Event listener for the Start button
+        document.getElementById('start').addEventListener('click', function() {
+            if (!intervalId) { // Check if interval is not already running
+                intervalId = setInterval(function() {
+                    sayDate("hi");
+                }, 1000);
+                console.log("Interval started.");
+            } else {
+                console.log("Interval is already running.");
+            }
+        });
+
+        // Event listener for the Stop button
+        document.getElementById('stop').addEventListener('click', function() {
+            if (intervalId) { // Check if interval is currently running
+                clearInterval(intervalId);
+                intervalId = null;
+                console.log("Interval stopped.");
+            } else {
+                console.log("No interval running to stop.");
+            }
+        });
+
+    </script>
+</body>
+</html>
